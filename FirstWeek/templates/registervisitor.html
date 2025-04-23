@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header text-center bg-primary text-white">
+                    <h4>Ziyaretçi Kaydı</h4>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/register">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Adı ve Soyadı</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Adınızı ve soyadınızı girin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-posta</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Kayıt Tarihi</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Kayıt Saati</label>
+                            <input type="time" class="form-control" id="time" name="time" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">Diğer Ziyaretçi Verileri</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Ek bilgi ekleyin"></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary text-white btn-lg">Kaydet</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="/" class="text-primary">Ana Sayfaya Dön</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

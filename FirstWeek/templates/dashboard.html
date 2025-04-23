@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-primary mb-4">Panel de Ziyaretçi Yönetimi</h1>
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center">
+                    <h4>Toplam Ziyaretçiler</h4>
+                    <p class="display-5">1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center">
+                    <h4>Bugünkü Ziyaretçiler</h4>
+                    <p class="display-5">1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light text-dark">
+                <div class="card-body text-center">
+                    <h4>Son Kayıt</h4>
+                    <p>Heriberto Fernandez<br>20:00, 2025-04-23</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h5>Ziyaretçi Listesi</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="table-primary text-white">
+                    <tr>
+                        <th>#</th>
+                        <th>Ad Soyad</th>
+                        <th>E-posta</th>
+                        <th>Tarih</th>
+                        <th>Saat</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Örnek satırlar -->
+                    <tr>
+                        <td>1</td>
+                        <td>Heriberto Fernandez</td>
+                        <td>heriberto.fech@gmail.com</td>
+                        <td>2025-04-23</td>
+                        <td>20:00</td>
+                        <td>
+                            <a href="/gunluk/duzenle/1" class="btn btn-sm btn-primary">Düzenle</a>
+                            <a href="#" class="btn btn-sm btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
