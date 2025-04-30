@@ -26,7 +26,6 @@ def dashboard():
     return render_template('dashboard.html')
 
 # Kullanıcıların şifrelerini kurtarmalarına olanak sağlayan "Şifremi Unuttum" sayfasına giden yol.
-
 @app.route("/forgot-password", methods=["GET", "POST"]) 
 def forgot_password():
     if request.method == "POST":
