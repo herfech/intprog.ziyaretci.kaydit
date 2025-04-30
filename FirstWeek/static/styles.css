@@ -1,3 +1,87 @@
+.index-background {
+    background-image: url('/static/img/white-building-cloudy-sky1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}   /* //////index stilleri////// */
+            .hero-section {
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* Metin ayarlamaları */
+            h1 {
+                text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.383);
+            }
+
+            /* Düğme */
+            .btn-success {
+                background-color: #0d6efd;
+                border: none;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .btn-success:hover {
+                transform: scale(1.1);
+                background-color: #0049c9;
+                box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.3);
+            }
+
+
+.login-background {
+    background-image: url('/static/img/Zonas-tensionadas-Cataluna-2-1200x9003.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.registervisitor-background {
+    background-image: url('/static/img/Zonas-tensionadas-Cataluna-2-1200x9001.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.dashboard-background {
+    background-image: url('/static/img/victor-sutty-5vYJJ2khdj8-unsplash1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.createaccount-background {
+    background-image: url('/static/img/victor-sutty-5vYJJ2khdj8-unsplash1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.forgot-password-background {
+    background-image: url('/static/img/victor-sutty-5vYJJ2khdj8-unsplash1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.blurred-box {
+    background: rgba(255, 255, 255, 0.1); /* Yarı saydam arka plan */
+    backdrop-filter: blur(10px); /* Bulanıklık */
+    border-radius: 25px; /* Yuvarlak kenarlar */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Gezinme Çubuğu */
 .navbar {
     transition: all 0.3s ease;
