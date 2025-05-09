@@ -57,6 +57,14 @@
     background-attachment: fixed;
 }
 
+.editvisitor-background {
+    background-image: url('/static/img/victor-sutty-5vYJJ2khdj8-unsplash1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .createaccount-background {
     background-image: url('/static/img/victor-sutty-5vYJJ2khdj8-unsplash1.png');
     background-size: cover;
