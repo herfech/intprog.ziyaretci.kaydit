@@ -12,7 +12,7 @@
                 </div>
                 <div class="ms-2">
                     <p class="mb-1 text-muted small">Toplam Ziyaretçiler</p>
-                    <p class="fw-bold text-primary mb-0">14</p>
+                    <p class="fw-bold text-primary mb-0">{{ total_visitors }}</p>
                 </div>
             </div>
             
@@ -22,7 +22,7 @@
                 </div>
                 <div class="ms-2">
                     <p class="mb-1 text-muted small">Bugünkü Ziyaretçiler</p>
-                    <p class="fw-bold text-success mb-0">0</p>
+                    <p class="fw-bold text-success mb-0">{{ visitors_today }}</p>
                 </div>
             </div>
     
@@ -32,13 +32,13 @@
                 </div>
                 <div class="ms-2">
                     <p class="mb-1 text-muted small">Son Kayıt</p>
-                    <p class="fw-bold text-warning mb-0">Heriberto Fernandez 2025-05-01 - 0:50</p>
+                    <p class="fw-bold text-warning mb-0">{{ last_registration }}</p>
                 </div>
             </div>
         </div>
     
         <!-- Aynı satır içinde sarılı arama çubuğu -->
-        <input type="text" id="searchInput" class="form-control w-25" placeholder="Ziyaretçiyi ara..." onkeyup="filtreTablo()">
+        <!--input type="text" id="searchInput" class="form-control w-25" placeholder="Ziyaretçiyi ara..." onkeyup="filtreTablo()"-->
     </div>
 
    <!-- Ziyaretçi tablosu -->
@@ -51,26 +51,28 @@
                 <thead class="table-primary text-white">
                     <tr>
                         <th>Id</th>
-                        <th>Ad Soyad</th>
+                        <th>Ad</th>
+                        <th>Soyad</th>
                         <th>Telefon</th>
                         <th>Tarih</th>
                         <th>Saat</th>
+                        <th>Diğer Bilgiler</th>
                         <th>İşlem</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Örnek satırlar -->
-                    <!--Bir veritabanım olmadığı için bu, panelin nasıl görüneceğine dair bir örnek teşkil ediyor.-->
-                    {% for i in range(1, 15) %}
+                    {% for visitor in visitors %}
                     <tr>
-                        <td>{{ i }}</td>
-                        <td>Ziyaretçi {{ i }}</td>
-                        <td>+90 544 827 51 63</td>
-                        <td>2025-04-{{ i }}</td>
-                        <td>{{ 18 + (i % 5) }}:{{ 10 + (i % 50) }}</td>
-                        <td>
-                            <a href="/registervisitor" class="btn btn-sm btn-primary">Düzenle</a>
-                            <a href="#" class="btn btn-sm btn-danger">Sil</a>
+                        <td>{{ visitor.id }}</td>
+                        <td>{{ visitor.name }}</td>
+                        <td>{{ visitor.surname }}</td>
+                        <td>{{ visitor.phone }}</td>
+                        <td>{{ visitor.date }}</td>
+                        <td>{{ visitor.time }}</td>
+                        <td>{{ visitor.other_data }}</td>
+                        <td>                
+                            <a href="/editvisitor/{{ visitor.id }}" class="btn btn-sm btn-primary">Düzenle</a>
+                            <a href="/deletevisitor/{{ visitor.id }}" class="btn btn-sm btn-danger">Sil</a>
                         </td>
                     </tr>
                     {% endfor %}

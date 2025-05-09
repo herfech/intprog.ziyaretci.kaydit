@@ -24,10 +24,22 @@
                     <h4 class="text-white fw-bold">Sisteme Giriş Yap</h4>
                 </div>
                 <div class="card-body">
+                    <!-- (Hata ve başarı) mesajlarını göster -->
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+
                     <form method="POST" action="/login">
                         <div class="mb-3">
-                            <label for="username" class="form-label text-white">Kullanıcı Adı</label>
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Kullanıcı adınızı girin" required>
+                            <!--<label for="username" class="form-label text-white">Kullanıcı Adı</label>-->
+                            <!--<input type="text" class="form-control" id="name" name="name" placeholder="Kullanıcı adınızı girin" required>-->
+                            <label for="user_identifier" class="form-label text-white">E-posta veya Kullanıcı Adı</label>
+                            <input type="text" class="form-control" id="user_identifier" name="user_identifier" placeholder="E-posta veya kullanıcı adınızı girin" required>
+                            
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label text-white">Şifre</label>
@@ -43,7 +55,7 @@
                         </div>
                     </form>
                     <div class="text-center mt-3">
-                        <a href="/createaccount" class="text-light">Hesap Oluştur</a>
+                        <a href="{{ url_for('createaccount') }}" class="text-light">Hesap Oluştur</a>
                     </div>
                 </div>
             </div>
